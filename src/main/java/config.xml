@@ -43,4 +43,15 @@
 
 	</bean>
 
+	<bean class="com.springdatabase.dao.EmployeeDaoImpl"
+		name="employeeDaoImpl">
+
+		<property name="jdbcTemplate">
+
+			<ref bean="jdbcTemplate" />
+
+		</property>
+
+	</bean>
+
 </beans>
