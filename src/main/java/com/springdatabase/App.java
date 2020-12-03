@@ -3,6 +3,7 @@ package com.springdatabase;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -16,7 +17,18 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("Application Started!!!!");
 
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("config.xml");
+		/*
+		 * ApplicationContext applicationContext = new
+		 * ClassPathXmlApplicationContext("config.xml");
+		 */
+
+		/*
+		 * This is if we are using annotation based configuration, we have created the
+		 * config class by the name RemovingXmlConfig. Check for the syntax on using the
+		 * annotation based method in the config class.
+		 */
+
+		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(RemovingXmlConfig.class);
 
 		/*
 		 * Getting the object of JdbcTemplate from bean container/application context.
