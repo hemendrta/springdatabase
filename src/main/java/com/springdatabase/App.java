@@ -58,12 +58,34 @@ public class App {
 
 		/* Updating Record in the database: */
 
-		Employee employee = new Employee();
+		/*
+		 * Employee employee = new Employee();
+		 * 
+		 * employee.setEmployeeId(1004);
+		 * employee.setEmployeeName("Aditi Gupta Chouhan");
+		 * employee.setEmployeeCity("Indore"); int updateEmployee =
+		 * employeeDaoImpl.updateEmployee(employee); System.out.println(updateEmployee +
+		 * " rows have been updated!!!");
+		 */
 
-		employee.setEmployeeId(1004);
-		employee.setEmployeeName("Aditi Gupta Chouhan");
-		employee.setEmployeeCity("Indore");
-		int updateEmployee = employeeDaoImpl.updateEmployee(employee);
-		System.out.println(updateEmployee + " rows have been updated!!!");
+		/* Deleting a Record in the database. */
+		/*
+		 * int deleteEmployee = employeeDaoImpl.deleteEmployee(1005);
+		 * System.out.println(deleteEmployee + " rows effected!!!");
+		 */
+
+		/* Selecting a single record from database. */
+		/*
+		 * We have to provide the implementation of RowMapper to select the single
+		 * object it basically converts the row to an object and the implementation of
+		 * same could be seen in the EmployeeRowMapperImpl in this we are using the
+		 * resultSet object to assign the values to the employee object, in the daoImpl
+		 * we are using the queryForObject in which we are passing the sqlQuery,
+		 * rowMapper object and argument which is employeeId.
+		 */
+
+		Employee employee = employeeDaoImpl.getEmployee(1001);
+		System.out.println(employee);
+
 	}
 }
