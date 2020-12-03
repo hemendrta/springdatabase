@@ -1,5 +1,7 @@
 package com.springdatabase;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -86,6 +88,9 @@ public class App {
 
 		Employee employee = employeeDaoImpl.getEmployee(1001);
 		System.out.println(employee);
+
+		List<Employee> employees = employeeDaoImpl.getEmployees();
+		System.out.println(employees);
 
 	}
 }
